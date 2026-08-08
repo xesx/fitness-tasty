@@ -11,6 +11,9 @@ build/
 .env.local
 .env.*.local
 
+# MCP config with real secrets (see .mcp.json.example for the template)
+.mcp.json
+
 # logs
 *.log
 npm-debug.log*
