@@ -8,7 +8,10 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 export default tseslint.config(
   { ignores: ['**/dist', '**/node_modules'] },
   {
-    files: ['apps/frontend/**/*.{ts,tsx}'],
+    // Covers every React frontend (apps/frontend-*) plus the shared UI kit.
+    // apps/backend-* will need their own block (Node globals, no react-hooks/
+    // react-refresh) once a backend package is actually scaffolded.
+    files: ['apps/frontend-*/**/*.{ts,tsx}', 'packages/ui/**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,

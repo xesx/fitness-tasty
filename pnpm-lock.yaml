@@ -33,7 +33,17 @@ importers:
         specifier: ^8.21.0
         version: 8.66.0(eslint@9.39.5)(typescript@6.0.3)
 
-  apps/frontend:
+  apps/backend-api: {}
+
+  apps/backend-bot: {}
+
+  apps/backend-cli: {}
+
+  apps/backend-cron: {}
+
+  apps/frontend-doctor: {}
+
+  apps/frontend-landing:
     dependencies:
       react:
         specifier: ^19.2.8
@@ -60,6 +70,14 @@ importers:
       vite:
         specifier: ^8.2.0
         version: 8.2.1(@types/node@24.13.3)
+
+  apps/frontend-patient: {}
+
+  packages/api-client: {}
+
+  packages/types: {}
+
+  packages/ui: {}
 
 packages:
 
