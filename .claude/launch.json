@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "frontend-doctor",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@fitness-tasty/frontend-doctor", "dev"],
+      "port": 5173
+    }
+  ]
+}

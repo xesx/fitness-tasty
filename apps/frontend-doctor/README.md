@@ -1,23 +1,36 @@
 # @fitness-tasty/frontend-doctor
 
-Веб-приложение для врача. Пока не создано — это заготовка пакета,
-которая резервирует место в workspace и место в общих
-ESLint/Prettier/TypeScript конфигурациях.
+Веб-приложение для врача. React + TypeScript + Vite, стилизовано
+Tailwind CSS v4 с дизайн-токенами из [`DESIGN.md`](./DESIGN.md).
 
-## Как заскаффолдить
+Сейчас реализован один экран — дашборд врача («Сводка на сегодня»),
+на статичных моковых данных (`src/data/dashboardMock.ts`), без роутинга
+и без бэкенда. Остальные разделы бокового меню (Пациенты, Календарь,
+Библиотека рецептов, Настройки) отображаются как неактивные пункты
+навигации — макеты для них ещё не готовы.
 
-Из `apps/`:
+## Команды
+
+Из корня репозитория:
 
 ```bash
-pnpm create vite frontend-doctor -- --template react-ts
+pnpm dev:doctor
 ```
 
-После этого:
+Или из этой директории:
 
-- задать `"name": "@fitness-tasty/frontend-doctor"` в `package.json`;
-- проверить, что `eslint.config.js` в корне репозитория подхватывает
-  `apps/frontend-doctor/**/*.{ts,tsx}` (сейчас это покрывается общим
-  паттерном `apps/frontend-*/**/*.{ts,tsx}`);
-- переиспользовать общие пакеты из `packages/*` (`@fitness-tasty/ui`,
-  `@fitness-tasty/api-client`, `@fitness-tasty/types`) вместо
-  дублирования компонентов и типов.
+```bash
+pnpm dev       # запустить в режиме разработки
+pnpm build     # tsc -b && vite build
+pnpm lint
+pnpm preview
+```
+
+## Дальнейшие шаги
+
+- Разделы бокового меню — по мере появления макетов.
+- Роутинг между разделами (react-router или аналог).
+- Переезд на реальные данные через `@fitness-tasty/api-client`
+  вместо `src/data/dashboardMock.ts`, когда появится `backend-api`.
+- Компоненты, которые понадобятся и `frontend-patient`, переносить
+  в `@fitness-tasty/ui` вместо дублирования.
