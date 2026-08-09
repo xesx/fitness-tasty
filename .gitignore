@@ -6,6 +6,9 @@ dist/
 dist-ssr/
 build/
 
+# generated Prisma client (packages/prisma)
+packages/prisma/generated/
+
 # env
 .env
 .env.local
