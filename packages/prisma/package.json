@@ -1,0 +1,22 @@
+{
+  "name": "@fitness-tasty/prisma",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./generated/prisma/client.ts"
+  },
+  "scripts": {
+    "generate": "prisma generate",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.9.1"
+  },
+  "devDependencies": {
+    "prisma": "^7.9.1",
+    "dotenv": "^17.2.3"
+  }
+}

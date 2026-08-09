@@ -22,6 +22,14 @@ exist yet:
   meant to be reused across the `apps/frontend-*` and `apps/backend-*`
   packages instead of duplicating code between them. Currently stub
   packages.
+- `packages/prisma` — the only scaffolded `packages/*` so far. Generates
+  and exports the Prisma Client for the single shared PostgreSQL database
+  used by **all** `apps/backend-*` services — there is no per-backend
+  schema. The schema itself lives at the repo root, `/prisma/schema.prisma`
+  (not inside the package), with migrations in `/prisma/migrations`;
+  `DATABASE_URL` is read from the repo-root `.env`. Currently defines one
+  model, `Patient` (table `patients`). See `packages/prisma/README.md` for
+  commands (`generate`, `migrate:dev`, `migrate:deploy`, `studio`).
 
 More apps of the same role are expected (e.g. a second landing page for a
 different brand, a per-role Telegram bot) — these follow the same
@@ -101,9 +109,11 @@ There is no test runner configured yet anywhere in the repo.
 - **Backends**: not yet created. `backend-api` is planned as NestJS per the
   README; `backend-bot`/`backend-cli`/`backend-cron` have no framework
   decided yet. All four are expected to depend on `packages/types` for
-  shared DTOs, and `backend-bot`/`backend-cli`/`backend-cron` are expected
-  to talk to `backend-api` through `packages/api-client` rather than
-  reimplementing HTTP calls.
+  shared DTOs and on `packages/prisma` for database access (one shared
+  Postgres database, one Prisma schema — do not add a second
+  `schema.prisma` per backend), and `backend-bot`/`backend-cli`/
+  `backend-cron` are expected to talk to `backend-api` through
+  `packages/api-client` rather than reimplementing HTTP calls.
 
 ## Conventions
 
