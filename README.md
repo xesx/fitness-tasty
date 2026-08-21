@@ -9,7 +9,7 @@
 fitness-tasty/
 ├── apps/
 │   ├── frontend-landing/   React + Vite + TypeScript — публичный лендинг
-│   ├── frontend-doctor/    React + Vite + TypeScript — приложение врача (заготовка)
+│   ├── frontend-admin/     React + Vite + TypeScript — приложение администратора (заготовка)
 │   ├── frontend-patient/   React + Vite + TypeScript — приложение пациента (заготовка)
 │   ├── backend-api/        NestJS — основной API (заготовка)
 │   ├── backend-bot/        Telegram-бот(ы) (заготовка)
@@ -27,7 +27,7 @@ fitness-tasty/
 
 Приложений одной роли может быть несколько (например, ещё один лендинг под другой
 бренд) — в этом случае используйте суффикс, например `frontend-landing-b2b`,
-`backend-bot-doctor`. Пакеты, помеченные «заготовка», ещё не заскаффолжены —
+`backend-bot-admin`. Пакеты, помеченные «заготовка», ещё не заскаффолжены —
 у них есть только `package.json`/`README.md`, резервирующие место в workspace;
 инструкция по наполнению — в README.md соответствующего пакета.
 
@@ -69,7 +69,7 @@ pnpm format         # отформатировать код Prettier'ом
 используйте `--filter`:
 
 ```bash
-pnpm --filter @fitness-tasty/frontend-doctor dev
+pnpm --filter @fitness-tasty/frontend-admin dev
 ```
 
 ## Добавление нового приложения или пакета
@@ -78,7 +78,7 @@ pnpm --filter @fitness-tasty/frontend-doctor dev
 автоматически станет частью монорепы без дополнительной настройки workspace,
 достаточно создать директорию с `package.json` внутри одной из них.
 
-- Новый фронтенд: `apps/frontend-<роль>` (например, `frontend-doctor`), см.
+- Новый фронтенд: `apps/frontend-<роль>` (например, `frontend-admin`), см.
   README.md внутри существующей заготовки для команды скаффолда через
   `pnpm create vite`.
 - Новый бэкенд-сервис (API/бот/CLI/крон): `apps/backend-<роль>`, см. README.md

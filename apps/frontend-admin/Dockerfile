@@ -1,5 +1,5 @@
 # Build context must be the repo root (pnpm-workspace.yaml + pnpm-lock.yaml live there),
-# not this directory. In Coolify: Base Directory = /, Dockerfile Location = /apps/frontend-doctor/Dockerfile
+# not this directory. In Coolify: Base Directory = /, Dockerfile Location = /apps/frontend-admin/Dockerfile
 
 FROM node:22-alpine AS builder
 RUN corepack enable && corepack prepare pnpm@10 --activate
@@ -9,10 +9,10 @@ WORKDIR /repo
 # needs all of them present -- copy the whole repo (see .dockerignore for exclusions).
 COPY . .
 RUN pnpm install --frozen-lockfile
-RUN pnpm --filter @fitness-tasty/frontend-doctor build
+RUN pnpm --filter @fitness-tasty/frontend-admin build
 
 FROM nginx:alpine
-COPY --from=builder /repo/apps/frontend-doctor/dist /usr/share/nginx/html
+COPY --from=builder /repo/apps/frontend-admin/dist /usr/share/nginx/html
 RUN printf 'server {\n\
     listen 80;\n\
     root /usr/share/nginx/html;\n\

@@ -1,7 +1,7 @@
 # @fitness-tasty/prisma
 
 Пакет с Prisma Client для единой PostgreSQL-базы, которую используют
-все бэкенды (`backend-api`/`backend-doctor-api`, `backend-bot`,
+все бэкенды (`backend-api`/`backend-admin-api`, `backend-bot`,
 `backend-cli`, `backend-cron`) — вместо того чтобы каждый бэкенд
 описывал свою копию схемы.
 

@@ -1,4 +1,4 @@
-const DOCTOR_AVATAR_URL =
+const ADMIN_AVATAR_URL =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuCWj9hSyOed6OKa0PEOX1uNBcRgYeveNnCXVL9GsDiBas7qF-x8u_N9cxRAzi6Nrnu8jIEuf3cp-1yodDHD0VhRD58wMy6UR77dxzASIOkVsmpYeDdm3ZxiyHmRK06LUqx4gyqdMCWU00tavpn3naNw4UbNJf0DgN8Wxo5qwIvw1_KaSTntr3ej_19CmydKG-_RSXRFnWOtvgjro_dBqO0VYA5VnSso7fzG2u9-hWWTVWYA8lfZdFvh'
 
 export function Header() {
@@ -26,7 +26,7 @@ export function Header() {
           <span className="material-symbols-outlined">help_outline</span>
         </button>
         <div className="ml-2 h-8 w-8 overflow-hidden rounded-full bg-secondary-container border border-outline-variant">
-          <img alt="Профиль врача" className="h-full w-full object-cover" src={DOCTOR_AVATAR_URL} />
+          <img alt="Профиль администратора" className="h-full w-full object-cover" src={ADMIN_AVATAR_URL} />
         </div>
       </div>
     </header>
