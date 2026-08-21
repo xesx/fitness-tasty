@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "frontend-doctor",
+      "name": "frontend-admin",
       "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["--filter", "@fitness-tasty/frontend-doctor", "dev"],
+      "runtimeArgs": ["--filter", "@fitness-tasty/frontend-admin", "dev"],
       "port": 5173
     }
   ]

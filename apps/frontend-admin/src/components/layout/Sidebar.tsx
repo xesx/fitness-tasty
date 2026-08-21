@@ -15,7 +15,7 @@ export function Sidebar() {
         </div>
         <div>
           <h1 className="font-headline-md text-headline-md font-bold text-primary">EndoCare Pro</h1>
-          <p className="font-body-sm text-body-sm text-on-surface-variant">Панель врача</p>
+          <p className="font-body-sm text-body-sm text-on-surface-variant">Панель администратора</p>
         </div>
       </div>
       <ul className="flex flex-grow flex-col gap-2">

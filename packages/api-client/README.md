@@ -1,7 +1,7 @@
 # @fitness-tasty/api-client
 
 Типизированный клиент для `apps/backend-api`, переиспользуемый всеми
-фронтендами (`frontend-doctor`, `frontend-patient`, `frontend-landing`)
+фронтендами (`frontend-admin`, `frontend-patient`, `frontend-landing`)
 и остальными сервисами (`backend-bot`, `backend-cli`, `backend-cron`).
 Пока не создано — это заготовка пакета, которая резервирует место в
 workspace.

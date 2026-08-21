@@ -1,7 +1,7 @@
 # @fitness-tasty/ui
 
 Общая библиотека React-компонентов (дизайн-система), переиспользуемая
-`apps/frontend-doctor`, `apps/frontend-patient` и
+`apps/frontend-admin`, `apps/frontend-patient` и
 `apps/frontend-landing`. Пока не создано — это заготовка пакета,
 которая резервирует место в workspace.
 

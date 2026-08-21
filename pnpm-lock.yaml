@@ -33,15 +33,15 @@ importers:
         specifier: ^8.21.0
         version: 8.66.0(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
 
+  apps/backend-admin-api: {}
+
   apps/backend-bot: {}
 
   apps/backend-cli: {}
 
   apps/backend-cron: {}
 
-  apps/backend-doctor-api: {}
-
-  apps/frontend-doctor:
+  apps/frontend-admin:
     dependencies:
       react:
         specifier: ^19.2.8

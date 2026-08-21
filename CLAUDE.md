@@ -11,8 +11,8 @@ exist yet:
 - `apps/frontend-landing` — the only real, working app. It's a stock
   `pnpm create vite` React+TypeScript template, not yet customized (`App.tsx`
   still contains the default Vite/React starter content).
-- `apps/frontend-doctor`, `apps/frontend-patient` — planned React+Vite SPAs
-  (doctor-facing, patient-facing). Currently stub packages: only
+- `apps/frontend-admin`, `apps/frontend-patient` — planned React+Vite SPAs
+  (admin-facing, patient-facing). Currently stub packages: only
   `package.json` + `README.md`, no source code.
 - `apps/backend-api` (NestJS), `apps/backend-bot` (Telegram bot(s)),
   `apps/backend-cli` (internal CLI tools), `apps/backend-cron` (scheduled
@@ -100,7 +100,7 @@ There is no test runner configured yet anywhere in the repo.
   - Prettier config: no semicolons, single quotes, trailing commas
     everywhere, 100-char print width.
 - **Frontend stack** (`apps/frontend-landing`, and future
-  `frontend-doctor`/`frontend-patient`): React 19 + TypeScript + Vite 8,
+  `frontend-admin`/`frontend-patient`): React 19 + TypeScript + Vite 8,
   built via `@vitejs/plugin-react`. TypeScript is split into
   `tsconfig.app.json` (app code) and `tsconfig.node.json` (Vite config
   itself), composed through the app's own `tsconfig.json` project
@@ -120,7 +120,7 @@ There is no test runner configured yet anywhere in the repo.
 - Repository documentation (README.md) is written in Russian; code and
   identifiers are in English.
 - Package names are scoped under `@fitness-tasty/*`, mirroring the
-  directory name (e.g. `apps/frontend-doctor` → `@fitness-tasty/frontend-doctor`).
+  directory name (e.g. `apps/frontend-admin` → `@fitness-tasty/frontend-admin`).
 - Naming pattern for new apps: `apps/frontend-<role>` for a frontend,
   `apps/backend-<role>` for a backend service; append `-<variant>` if a
   second app of the same role is needed (e.g. `frontend-landing-b2b`).
