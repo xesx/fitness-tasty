@@ -13,6 +13,9 @@ export function Sidebar() {
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
           <span className="material-symbols-outlined fill">medical_services</span>
         </div>
+        <div>
+          <h1 className="font-headline-md text-headline-md font-bold text-primary">Fitness Tasty</h1>
+        </div>
       </div>
       <ul className="flex flex-grow flex-col gap-2">
         {NAV_ITEMS.map((item) => (
