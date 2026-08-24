@@ -11,10 +11,12 @@ export function Sidebar() {
     <nav className="fixed left-0 top-0 z-20 hidden h-full w-[280px] shrink-0 flex-col bg-surface-container-lowest px-sm py-lg md:flex border-r border-outline-variant">
       <div className="mb-xl flex items-center gap-3 px-4">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
-          <span className="material-symbols-outlined fill">medical_services</span>
+          <span className="material-symbols-outlined fill">fitness_center</span>
         </div>
         <div>
-          <h1 className="font-headline-md text-headline-md font-bold text-primary">Fitness Tasty</h1>
+          <h1 className="font-headline-md text-headline-md font-bold text-primary">
+            Fitness Tasty
+          </h1>
         </div>
       </div>
       <ul className="flex flex-grow flex-col gap-2">
