@@ -14,7 +14,7 @@ export function MetricsGrid() {
           </span>
         </div>
         <div>
-          <p className="mb-1 font-body-sm text-body-sm text-on-surface-variant">Всего пациентов</p>
+          <p className="mb-1 font-body-sm text-body-sm text-on-surface-variant">Всего клиентов</p>
           <h3 className="font-display-lg text-display-lg text-on-surface">124</h3>
         </div>
       </div>

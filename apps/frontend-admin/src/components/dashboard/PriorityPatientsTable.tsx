@@ -13,7 +13,7 @@ export function PriorityPatientsTable() {
       <div className="flex items-center justify-between border-b border-outline-variant bg-surface-bright p-6">
         <h3 className="flex items-center gap-2 font-headline-md text-headline-md text-on-surface">
           <span className="material-symbols-outlined text-primary">priority_high</span>
-          Приоритетный список пациентов
+          Приоритетный список клиентов
         </h3>
         <button
           type="button"
@@ -26,7 +26,7 @@ export function PriorityPatientsTable() {
         <table className="w-full border-collapse text-left">
           <thead>
             <tr className="border-b border-outline-variant bg-surface-bright font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">
-              <th className="p-4 pl-6 font-medium">Пациент</th>
+              <th className="p-4 pl-6 font-medium">Клиент</th>
               <th className="p-4 font-medium">Статус</th>
               <th className="p-4 font-medium">Последняя запись</th>
               <th className="p-4 font-medium">Динамика</th>

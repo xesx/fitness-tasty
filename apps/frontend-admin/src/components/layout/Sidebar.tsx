@@ -1,12 +1,19 @@
-const NAV_ITEMS = [
-  { label: 'Дашборд', icon: 'dashboard', active: true },
-  { label: 'Пациенты', icon: 'groups', active: false },
-  { label: 'Календарь', icon: 'calendar_today', active: false },
-  { label: 'Библиотека рецептов', icon: 'menu_book', active: false },
-  { label: 'Настройки', icon: 'settings', active: false },
+export type SectionId = 'dashboard' | 'clients'
+
+const NAV_ITEMS: { id: SectionId | null; label: string; icon: string }[] = [
+  { id: 'dashboard', label: 'Дашборд', icon: 'dashboard' },
+  { id: 'clients', label: 'Клиенты', icon: 'groups' },
+  { id: null, label: 'Календарь', icon: 'calendar_today' },
+  { id: null, label: 'Библиотека рецептов', icon: 'menu_book' },
+  { id: null, label: 'Настройки', icon: 'settings' },
 ]
 
-export function Sidebar() {
+type SidebarProps = {
+  activeSection: SectionId
+  onSelectSection: (section: SectionId) => void
+}
+
+export function Sidebar({ activeSection, onSelectSection }: SidebarProps) {
   return (
     <nav className="fixed left-0 top-0 z-20 hidden h-full w-[280px] shrink-0 flex-col bg-surface-container-lowest px-sm py-lg md:flex border-r border-outline-variant">
       <div className="mb-xl flex items-center gap-3 px-4">
@@ -20,27 +27,34 @@ export function Sidebar() {
         </div>
       </div>
       <ul className="flex flex-grow flex-col gap-2">
-        {NAV_ITEMS.map((item) => (
-          <li key={item.label}>
-            <a
-              href="#"
-              className={
-                item.active
-                  ? 'flex items-center gap-sm rounded-lg bg-primary-container px-4 py-3 text-on-primary-container opacity-90 transition-opacity'
-                  : 'flex items-center gap-sm rounded-lg px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container'
-              }
-            >
-              <span
+        {NAV_ITEMS.map((item) => {
+          const isActive = item.id !== null && item.id === activeSection
+          return (
+            <li key={item.label}>
+              <a
+                href="#"
+                onClick={(event) => {
+                  event.preventDefault()
+                  if (item.id !== null) {
+                    onSelectSection(item.id)
+                  }
+                }}
                 className={
-                  item.active ? 'material-symbols-outlined fill' : 'material-symbols-outlined'
+                  isActive
+                    ? 'flex items-center gap-sm rounded-lg bg-primary-container px-4 py-3 text-on-primary-container opacity-90 transition-opacity'
+                    : 'flex items-center gap-sm rounded-lg px-4 py-3 text-on-surface-variant transition-colors hover:bg-surface-container'
                 }
               >
-                {item.icon}
-              </span>
-              <span className="font-label-md text-label-md">{item.label}</span>
-            </a>
-          </li>
-        ))}
+                <span
+                  className={isActive ? 'material-symbols-outlined fill' : 'material-symbols-outlined'}
+                >
+                  {item.icon}
+                </span>
+                <span className="font-label-md text-label-md">{item.label}</span>
+              </a>
+            </li>
+          )
+        })}
       </ul>
       <div className="mt-auto border-t border-outline-variant pt-4">
         <a

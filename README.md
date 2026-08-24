@@ -10,7 +10,7 @@ fitness-tasty/
 ├── apps/
 │   ├── frontend-landing/   React + Vite + TypeScript — публичный лендинг
 │   ├── frontend-admin/     React + Vite + TypeScript — приложение администратора (заготовка)
-│   ├── frontend-patient/   React + Vite + TypeScript — приложение пациента (заготовка)
+│   ├── frontend-patient/   React + Vite + TypeScript — приложение клиента (заготовка)
 │   ├── backend-api/        NestJS — основной API (заготовка)
 │   ├── backend-bot/        Telegram-бот(ы) (заготовка)
 │   ├── backend-cli/        внутренние CLI-утилиты (заготовка)
