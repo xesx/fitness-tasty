@@ -6,9 +6,9 @@ export function Header() {
     <header className="sticky top-0 z-10 flex h-16 w-full items-center justify-between bg-surface px-margin-mobile md:px-margin-desktop border-b border-outline-variant">
       <div className="flex items-center gap-3 md:hidden">
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
-          <span className="material-symbols-outlined fill text-sm">medical_services</span>
+          <span className="material-symbols-outlined fill text-sm">fitness_center</span>
         </div>
-        <h1 className="font-headline-md text-headline-md font-bold text-primary">EndoCare Pro</h1>
+        <h1 className="font-headline-md text-headline-md font-bold text-primary">Fitness Tasty</h1>
       </div>
       <div className="hidden md:block" />
       <div className="flex items-center gap-4">
@@ -26,7 +26,11 @@ export function Header() {
           <span className="material-symbols-outlined">help_outline</span>
         </button>
         <div className="ml-2 h-8 w-8 overflow-hidden rounded-full bg-secondary-container border border-outline-variant">
-          <img alt="Профиль администратора" className="h-full w-full object-cover" src={ADMIN_AVATAR_URL} />
+          <img
+            alt="Профиль администратора"
+            className="h-full w-full object-cover"
+            src={ADMIN_AVATAR_URL}
+          />
         </div>
       </div>
     </header>

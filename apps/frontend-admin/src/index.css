@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Colors — ported from the EndoCare Pro design tokens (Alexandria design brief) */
+  /* Colors — ported from the Fitness Tasty design tokens (Alexandria design brief) */
   --color-inverse-primary: #b1c5ff;
   --color-on-secondary-fixed-variant: #42474b;
   --color-surface-container-highest: #e3e2e3;
