@@ -10,9 +10,23 @@ datasource db {
   provider = "postgresql"
 }
 
+model Admin {
+  id         Int      @id @default(autoincrement())
+  firstName  String
+  lastName   String
+  middleName String?
+  photo      String?
+  phone      String?
+  telegramId String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("admins")
+}
+
 model User {
-  id         String    @id @default(uuid())
-  email      String    @unique
+  id         Int             @id @default(autoincrement())
+  email      String          @unique
   firstName  String
   lastName   String
   middleName String?
@@ -20,8 +34,25 @@ model User {
   phone      String?
   telegramId String?
   birthDate  DateTime?
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+  indicators UserIndicator[]
 
   @@map("users")
+}
+
+model UserIndicator {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  type      String
+  value     Decimal  @db.Decimal(36, 12)
+  comment   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, type, createdAt])
+
+  @@map("user_indicators")
 }
